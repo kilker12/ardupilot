@@ -1,6 +1,5 @@
-
-#ifndef __AP_HAL_EMPTY_H__
-#define __AP_HAL_EMPTY_H__
+#ifndef __AP_HAL_AIOPV2_H__
+#define __AP_HAL_AIOPV2_H__
 
 /* Your layer exports should depend on AP_HAL.h ONLY. */
 #include <AP_HAL.h>
@@ -27,8 +26,8 @@
  * `void setup()` and `void loop()`, ala Arduino.
  */
 
-#include "HAL_Empty_Class.h"
-#include "AP_HAL_Empty_Main.h"
+#include "HAL_AIOPV2_Class.h"
+#include "AP_HAL_AIOPV2_Main.h"
 
-#endif //__AP_HAL_EMPTY_H__
+#endif //__AP_HAL_AIOPV2_H__
 
