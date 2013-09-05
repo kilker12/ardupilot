@@ -1,6 +1,5 @@
-
-#ifndef __AP_HAL_EMPTY_PRIVATE_H__
-#define __AP_HAL_EMPTY_PRIVATE_H__
+#ifndef __AP_HAL_AIOPV2_PRIVATE_H__
+#define AIOPV2
 
 /* Umbrella header for all private headers of the AP_HAL_Empty module.
  * Only import this header from inside AP_HAL_Empty
@@ -20,5 +19,5 @@
 #include "Util.h"
 #include "PrivateMember.h"
 
-#endif // __AP_HAL_EMPTY_PRIVATE_H__
+#endif // __AP_HAL_AIOPV2_PRIVATE_H__
 
