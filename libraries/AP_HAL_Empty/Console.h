@@ -1,12 +1,11 @@
+#ifndef __AP_HAL_AIOPV2_CONSOLE_H__
+#define __AP_HAL_AIOPV2_CONSOLE_H__
 
-#ifndef __AP_HAL_EMPTY_CONSOLE_H__
-#define __AP_HAL_EMPTY_CONSOLE_H__
+#include <AP_HAL_AIOPV2.h>
 
-#include <AP_HAL_Empty.h>
-
-class Empty::EmptyConsoleDriver : public AP_HAL::ConsoleDriver {
+class AIOPV2::AIOPV2ConsoleDriver : public AP_HAL::ConsoleDriver {
 public:
-    EmptyConsoleDriver(AP_HAL::BetterStream* delegate);
+    AIOPV2ConsoleDriver(AP_HAL::BetterStream* delegate);
     void init(void* machtnichts);
     void backend_open();
     void backend_close();
@@ -29,4 +28,4 @@ private:
     AP_HAL::BetterStream *_d;
 };
 
-#endif // __AP_HAL_EMPTY_CONSOLE_H__
+#endif // __AP_HAL_AIOPV2_CONSOLE_H__
