@@ -1,9 +1,8 @@
 
+#ifndef __AP_HAL_AIOPV2_MAIN_H__
+#define __AP_HAL_AIOPV2_MAIN_H__
 
-#ifndef __AP_HAL_EMPTY_MAIN_H__
-#define __AP_HAL_EMPTY_MAIN_H__
-
-#if CONFIG_HAL_BOARD == HAL_BOARD_EMPTY
+#if CONFIG_HAL_BOARD == HAL_BOARD_AIOPV2
 #define AP_HAL_MAIN() extern "C" {\
     int main (void) {\
 	hal.init(0, NULL);			\
@@ -13,6 +12,6 @@
         return 0;\
     }\
     }
-#endif // HAL_BOARD_EMPTY
+#endif // HAL_BOARD_AIOPV2
 
-#endif // __AP_HAL_EMPTY_MAIN_H__
+#endif // __AP_HAL_AIOPV2_MAIN_H__
