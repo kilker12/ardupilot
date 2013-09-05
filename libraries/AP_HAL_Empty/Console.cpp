@@ -1,30 +1,30 @@
 #include <stdarg.h>
 #include "Console.h"
 
-using namespace Empty;
+using namespace AIOPV2;
 
-EmptyConsoleDriver::EmptyConsoleDriver(AP_HAL::BetterStream* delegate) :
+AIOPV2ConsoleDriver::AIOPV2ConsoleDriver(AP_HAL::BetterStream* delegate) :
     _d(delegate)
 {}
 
-void EmptyConsoleDriver::init(void* machtnichts)
+void AIOPV2ConsoleDriver::init(void* machtnichts)
 {}
 
-void EmptyConsoleDriver::backend_open()
+void AIOPV2ConsoleDriver::backend_open()
 {}
 
-void EmptyConsoleDriver::backend_close()
+void AIOPV2ConsoleDriver::backend_close()
 {}
 
-size_t EmptyConsoleDriver::backend_read(uint8_t *data, size_t len) {
+size_t AIOPV2ConsoleDriver::backend_read(uint8_t *data, size_t len) {
     return 0;
 }
 
-size_t EmptyConsoleDriver::backend_write(const uint8_t *data, size_t len) {
+size_t AIOPV2ConsoleDriver::backend_write(const uint8_t *data, size_t len) {
     return 0;
 }
 
-void EmptyConsoleDriver::print_P(const prog_char_t *pstr) {
+void AIOPV2ConsoleDriver::print_P(const prog_char_t *pstr) {
     _d->print_P(pstr);
 }
 
