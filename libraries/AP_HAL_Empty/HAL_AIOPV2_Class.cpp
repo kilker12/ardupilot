@@ -21,7 +21,7 @@ static AIOPV2RCOutput rcoutDriver;
 static AIOPV2Scheduler schedulerInstance;
 static AIOPV2Util utilInstance;
 
-HAL_Empty::HAL_Empty() :
+HAL_AIOPV2::HAL_AIOPV2() :
     AP_HAL::HAL(
         &uartADriver,
         &uartBDriver,
@@ -36,10 +36,10 @@ HAL_Empty::HAL_Empty() :
         &rcoutDriver,
         &schedulerInstance,
         &utilInstance),
-    _member(new EmptyPrivateMember(123))
+    _member(new AIOPV2PrivateMember(123))
 {}
 
-void HAL_Empty::init(int argc,char* const argv[]) const {
+void HAL_AIOPV2::init(int argc,char* const argv[]) const {
     /* initialize all drivers and private members here.
      * up to the programmer to do this in the correct order.
      * Scheduler should likely come first. */
@@ -48,6 +48,6 @@ void HAL_Empty::init(int argc,char* const argv[]) const {
     _member->init();
 }
 
-const HAL_Empty AP_HAL_Empty;
+const HAL_AIOPV2 AP_HAL_AIOPV2;
 
 #endif
