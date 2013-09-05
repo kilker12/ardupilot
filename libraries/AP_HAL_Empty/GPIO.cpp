@@ -47,7 +47,7 @@ uint8_t AIOPV2DigitalSource::read() {
     return _v;
 }
 
-void EmptyDigitalSource::write(uint8_t value) {
+void AIOPV2DigitalSource::write(uint8_t value) {
     _v = value;
 }
 
