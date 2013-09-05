@@ -1,40 +1,40 @@
 #include "AnalogIn.h"
 
-using namespace Empty;
+using namespace AIOPV2;
 
-EmptyAnalogSource::EmptyAnalogSource(float v) :
+AIOPV2AnalogSource::AIOPV2AnalogSource(float v) :
     _v(v)
 {}
 
-float EmptyAnalogSource::read_average() {
+float AIOPV2AnalogSource::read_average() {
     return _v;
 }
 
-float EmptyAnalogSource::voltage_average() {
+float AIOPV2AnalogSource::voltage_average() {
     return 5.0 * _v / 1024.0;
 }
 
-float EmptyAnalogSource::read_latest() {
+float AIOPV2AnalogSource::read_latest() {
     return _v;
 }
 
-void EmptyAnalogSource::set_pin(uint8_t p)
+void AIOPV2AnalogSource::set_pin(uint8_t p)
 {}
 
-void EmptyAnalogSource::set_stop_pin(uint8_t p)
+void AIOPV2AnalogSource::set_stop_pin(uint8_t p)
 {}
 
-void EmptyAnalogSource::set_settle_time(uint16_t settle_time_ms)
+void AIOPV2AnalogSource::set_settle_time(uint16_t settle_time_ms)
 {}
 
-EmptyAnalogIn::EmptyAnalogIn()
+AIOPV2AnalogIn::AIOPV2AnalogIn()
 {}
 
-void EmptyAnalogIn::init(void* machtnichts)
+void AIOPV2AnalogIn::init(void* machtnichts)
 {}
 
-AP_HAL::AnalogSource* EmptyAnalogIn::channel(int16_t n) {
-    return new EmptyAnalogSource(1.11);
+AP_HAL::AnalogSource* AIOPV2AnalogIn::channel(int16_t n) {
+    return new AIOPV2(1.11);
 }
 
 
