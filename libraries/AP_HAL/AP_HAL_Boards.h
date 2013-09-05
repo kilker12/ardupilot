@@ -1,4 +1,3 @@
-
 #ifndef __AP_HAL_BOARDS_H__
 #define __AP_HAL_BOARDS_H__
 
@@ -14,6 +13,7 @@
 #define HAL_BOARD_APM2     2
 #define HAL_BOARD_AVR_SITL 3
 #define HAL_BOARD_SMACCM   4
+#define HAL_BOARD_AIOPV2   5
 #define HAL_BOARD_EMPTY    99
 
 /*
@@ -40,6 +40,9 @@
 #elif CONFIG_HAL_BOARD == HAL_BOARD_EMPTY
 #define AP_HAL_BOARD_DRIVER AP_HAL_Empty
 #define HAL_BOARD_NAME "EMPTY"
+#elif CONFIG_HAL_BOARD == HAL_BOARD_AIOPV2
+#define AP_HAL_BOARD_DRIVER AP_HAL_AIOPV2
+#define HAL_BOARD_NAME "CRIUS AIOP v2"
 #else
 #error "Unknown CONFIG_HAL_BOARD type"
 #endif
