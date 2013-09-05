@@ -1,12 +1,11 @@
+#ifndef __AP_HAL_AIOPV2_GPIO_H__
+#define __AP_HAL_AIOPV2_GPIO_H__
 
-#ifndef __AP_HAL_EMPTY_GPIO_H__
-#define __AP_HAL_EMPTY_GPIO_H__
+#include <AP_HAL_AIOPV2.h>
 
-#include <AP_HAL_Empty.h>
-
-class Empty::EmptyGPIO : public AP_HAL::GPIO {
+class AIOPV2::AIOPV2GPIO : public AP_HAL::GPIO {
 public:
-    EmptyGPIO();
+    AIOPV2GPIO();
     void    init();
     void    pinMode(uint8_t pin, uint8_t output);
     int8_t  analogPinToDigitalPin(uint8_t pin);
@@ -22,9 +21,9 @@ public:
 
 };
 
-class Empty::EmptyDigitalSource : public AP_HAL::DigitalSource {
+class AIOPV2::AIOPV2DigitalSource : public AP_HAL::DigitalSource {
 public:
-    EmptyDigitalSource(uint8_t v);
+    AIOPV2DigitalSource(uint8_t v);
     void    mode(uint8_t output);
     uint8_t read();
     void    write(uint8_t value); 
@@ -32,4 +31,4 @@ private:
     uint8_t _v;
 };
 
-#endif // __AP_HAL_EMPTY_GPIO_H__
+#endif // __AP_HAL_AIOPV2_GPIO_H__
