@@ -28,45 +28,45 @@ void AIOPV2ConsoleDriver::print_P(const prog_char_t *pstr) {
     _d->print_P(pstr);
 }
 
-void EmptyConsoleDriver::println_P(const prog_char_t *pstr) {
+void AIOPV2ConsoleDriver::println_P(const prog_char_t *pstr) {
     _d->println_P(pstr);
 }
 
-void EmptyConsoleDriver::printf(const char *fmt, ...) {
+void AIOPV2ConsoleDriver::printf(const char *fmt, ...) {
     va_list ap;
     va_start(ap, fmt);
     vprintf(fmt, ap);
     va_end(ap);
 }
 
-void EmptyConsoleDriver::_printf_P(const prog_char *fmt, ...) {
+void AIOPV2::_printf_P(const prog_char *fmt, ...) {
     va_list ap;
     va_start(ap,fmt);
     vprintf_P(fmt, ap);
     va_end(ap);
 }
 
-void EmptyConsoleDriver::vprintf(const char *fmt, va_list ap) {
+void AIOPV2ConsoleDriver::vprintf(const char *fmt, va_list ap) {
     _d->vprintf(fmt, ap);
 }
 
-void EmptyConsoleDriver::vprintf_P(const prog_char *fmt, va_list ap) {
+void AIOPV2ConsoleDriver::vprintf_P(const prog_char *fmt, va_list ap) {
     _d->vprintf_P(fmt, ap);
 }
 
-int16_t EmptyConsoleDriver::available() {
+int16_t AIOPV2::available() {
     return _d->available();
 }
 
-int16_t EmptyConsoleDriver::txspace() {
+int16_t AIOPV2ConsoleDriver::txspace() {
     return _d->txspace();
 }
 
-int16_t EmptyConsoleDriver::read() {
+int16_t AIOPV2ConsoleDriver::read() {
     return _d->read();
 }
 
-size_t EmptyConsoleDriver::write(uint8_t c) {
+size_t AIOPV2ConsoleDriver::write(uint8_t c) {
     return _d->write(c);
 }
 
